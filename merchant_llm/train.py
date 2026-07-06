@@ -171,6 +171,9 @@ def main(argv: list[str] | None = None) -> None:
         logging_steps=args.logging_steps,
         eval_strategy="steps",
         eval_steps=args.eval_steps,
+        # only track eval loss; otherwise the Trainer gathers full-vocab logits
+        # for the whole val set, which is brutally slow and memory-hungry
+        prediction_loss_only=True,
         save_strategy="no",
         bf16=bf16,
         fp16=fp16,
