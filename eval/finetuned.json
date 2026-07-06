@@ -1,0 +1,160 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "adapter": "models/adapter",
+  "data": "data\\test.jsonl",
+  "device": "cuda",
+  "decode": {
+    "strategy": "greedy",
+    "max_new_tokens": 64
+  },
+  "eval_seconds": 11.2,
+  "metrics": {
+    "n": 1000,
+    "json_validity": 1.0,
+    "category_accuracy": 0.982,
+    "name_exact_match": 0.972,
+    "both_correct": 0.972
+  },
+  "sample_predictions": [
+    {
+      "raw": "GridPoint Enrgy #07033 S",
+      "expected": {
+        "merchant_name": "GridPoint Energy",
+        "category": "utilities"
+      },
+      "output": "{\"merchant_name\": \"GridPoint Energy\", \"category\": \"utilities\"}",
+      "parsed": {
+        "merchant_name": "GridPoint Energy",
+        "category": "utilities"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "SWIFTSEAT 8810",
+      "expected": {
+        "merchant_name": "SwiftSeat",
+        "category": "rideshare"
+      },
+      "output": "{\"merchant_name\": \"SwiftSeat\", \"category\": \"rideshare\"}",
+      "parsed": {
+        "merchant_name": "SwiftSeat",
+        "category": "rideshare"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "RAPIDWAYTRNST LAS VEGAS",
+      "expected": {
+        "merchant_name": "RapidWay Transit",
+        "category": "transit"
+      },
+      "output": "{\"merchant_name\": \"RapidWay Transit\", \"category\": \"transit\"}",
+      "parsed": {
+        "merchant_name": "RapidWay Transit",
+        "category": "transit"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "URBANSHUTTLE*CO STORE 995",
+      "expected": {
+        "merchant_name": "UrbanShuttle Co",
+        "category": "rideshare"
+      },
+      "output": "{\"merchant_name\": \"UrbanShuttle Co\", \"category\": \"rideshare\"}",
+      "parsed": {
+        "merchant_name": "UrbanShuttle Co",
+        "category": "rideshare"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "BRIGHT SCREEN TV CO",
+      "expected": {
+        "merchant_name": "Bright Screen TV Co",
+        "category": "electronics"
+      },
+      "output": "{\"merchant_name\": \"Bright Screen TV Co\", \"category\": \"electronics\"}",
+      "parsed": {
+        "merchant_name": "Bright Screen TV Co",
+        "category": "electronics"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "APEX PERFORMANCE * 4039704924",
+      "expected": {
+        "merchant_name": "Apex Performance Gym",
+        "category": "fitness"
+      },
+      "output": "{\"merchant_name\": \"Apex Performance Gym\", \"category\": \"fitness\"}",
+      "parsed": {
+        "merchant_name": "Apex Performance Gym",
+        "category": "fitness"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "BLUE-FlAmE-GAs",
+      "expected": {
+        "merchant_name": "Blue Flame Gas",
+        "category": "fuel"
+      },
+      "output": "{\"merchant_name\": \"Blue Flame Gas\", \"category\": \"fuel\"}",
+      "parsed": {
+        "merchant_name": "Blue Flame Gas",
+        "category": "fuel"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "FLEXCITY-FITNS",
+      "expected": {
+        "merchant_name": "FlexCity Fitness",
+        "category": "fitness"
+      },
+      "output": "{\"merchant_name\": \"FlexCity Fitness\", \"category\": \"fitness\"}",
+      "parsed": {
+        "merchant_name": "FlexCity Fitness",
+        "category": "fitness"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "PINBALL PALACE HOUSTON TX",
+      "expected": {
+        "merchant_name": "Pinball Palace",
+        "category": "entertainment"
+      },
+      "output": "{\"merchant_name\": \"Pinball Palace\", \"category\": \"entertainment\"}",
+      "parsed": {
+        "merchant_name": "Pinball Palace",
+        "category": "entertainment"
+      },
+      "category_correct": true,
+      "name_correct": true
+    },
+    {
+      "raw": "CLICKCRATE #40107 302822",
+      "expected": {
+        "merchant_name": "ClickCrate",
+        "category": "online_retail"
+      },
+      "output": "{\"merchant_name\": \"ClickCrate\", \"category\": \"online_retail\"}",
+      "parsed": {
+        "merchant_name": "ClickCrate",
+        "category": "online_retail"
+      },
+      "category_correct": true,
+      "name_correct": true
+    }
+  ]
+}

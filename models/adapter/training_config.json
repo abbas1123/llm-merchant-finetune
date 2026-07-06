@@ -1,0 +1,36 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "epochs": 2.0,
+  "batch_size": 16,
+  "grad_accum": 1,
+  "learning_rate": 0.0002,
+  "scheduler": "cosine",
+  "warmup_steps": 20,
+  "max_len": 512,
+  "seed": 13,
+  "train_examples": 6000,
+  "val_examples": 1000,
+  "precision": "bf16",
+  "device": "NVIDIA GeForce RTX 5070",
+  "wall_seconds": 1229.2,
+  "final_eval_loss": 0.0055,
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.13.0",
+    "peft": "0.19.1"
+  }
+}
