@@ -1,0 +1,5 @@
+# Lightweight CI dependencies. CI runs lint plus the pure-python test suite;
+# nothing here pulls in torch or transformers (model tests are marked "local").
+pytest==9.1.1
+ruff==0.15.20
+pydantic-settings==2.14.2

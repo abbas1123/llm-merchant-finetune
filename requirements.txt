@@ -1,0 +1,20 @@
+# Full stack for data generation, training, evaluation and serving.
+#
+# The default PyPI torch wheel is CPU-only on Windows. For an NVIDIA GPU
+# install torch from the matching CUDA index first, e.g.:
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+transformers==5.13.0
+peft==0.19.1
+datasets==5.0.0
+accelerate==1.14.0
+
+# Serving
+fastapi==0.139.0
+uvicorn==0.50.2
+pydantic-settings==2.14.2
+
+# Dev
+pytest==9.1.1
+ruff==0.15.20
+httpx==0.28.1

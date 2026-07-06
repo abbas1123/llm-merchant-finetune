@@ -1,0 +1,28 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Generated datasets (a small sample is committed instead)
+data/*.jsonl
+!data/sample.jsonl
+
+# Hugging Face cache and training checkpoints
+.hf_cache/
+models/checkpoints/
+
+# The LoRA adapter in models/adapter/ IS committed (a few MB).
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
