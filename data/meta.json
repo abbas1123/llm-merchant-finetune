@@ -1,0 +1,31 @@
+{
+  "seed": 13,
+  "splits": {
+    "train": 6000,
+    "val": 1000,
+    "test": 1000
+  },
+  "categories": [
+    "grocery",
+    "fuel",
+    "restaurants",
+    "fast_food",
+    "coffee",
+    "streaming",
+    "airlines",
+    "hotels",
+    "rideshare",
+    "transit",
+    "pharmacy",
+    "electronics",
+    "clothing",
+    "home_improvement",
+    "telecom",
+    "utilities",
+    "fitness",
+    "entertainment",
+    "online_retail",
+    "insurance"
+  ],
+  "merchant_pool_size": 242
+}
