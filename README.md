@@ -46,6 +46,23 @@ The instruct-tuned base already emits well-formed JSON on every input, so fine-t
 
 Full numbers and the exact eval config are in [eval/results.md](eval/results.md).
 
+### Parsing robustness
+
+Those accuracy numbers only hold if the parser reliably turns real, messy model
+output into a clean prediction. `eval/run_robustness.py` stress-tests that layer
+without the model or a GPU: it feeds prose-wrapped, markdown-fenced, extra-key,
+whitespace-noisy and decoy-object outputs (which should still extract) alongside
+single-quoted, truncated and wrong-typed outputs (which should be rejected, not
+guessed).
+
+| check | result |
+|---|---|
+| extraction on messy-but-recoverable outputs | 100% (7 cases) |
+| safe rejection of malformed outputs | 100% (6 cases) |
+
+Report in [eval/robustness_report.md](eval/robustness_report.md); reproduce with
+`python eval/run_robustness.py`.
+
 ## Quickstart
 
 ```powershell
